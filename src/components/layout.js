@@ -22,8 +22,10 @@ export default function Layout({ children }) {
       css={css`
         margin: 0 auto;
         max-width: 700px;
+        height: 100vh;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
+        background-color: #fff;
       `}
     >
       <Link to={`/`}>
@@ -46,6 +48,22 @@ export default function Layout({ children }) {
         About
       </Link>
       {children}
+      <footer
+        css={css`
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        `}
+      >
+        <img
+          css={css`
+            margin-top: 4rem;
+            height: 200px;
+          `}
+          alt="Moving Panda gif"
+          src="https://i.pinimg.com/originals/80/04/08/800408befa37ea6507300576e52b81b5.gif"
+        ></img>
+      </footer>
     </div>
   )
 }
