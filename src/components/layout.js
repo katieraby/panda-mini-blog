@@ -21,8 +21,8 @@ export default function Layout({ children }) {
     <div
       css={css`
         margin: 0 auto;
-        border-left: 10px solid #6aa824;
-        border-right: 10px solid #6aa824;
+        border-left: 10px solid #cfa672;
+        border-right: 10px solid #cfa672;
         max-width: 700px;
         height: 100vh;
         padding: ${rhythm(2)};
