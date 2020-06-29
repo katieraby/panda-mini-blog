@@ -7,6 +7,8 @@
 module.exports = {
   siteMetadata: {
     title: `Pandas Eating Lots`,
+    description: `A simple description about pandas eating lots...`,
+    author: `gatsbyjs`,
   },
   plugins: [
     {
@@ -38,7 +40,13 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-offline`,
+    //should be listed after the manifest plugin so that the offline plugin can cache the created manifest.webmanifest
+    `gatsby-plugin-react-helmet`,
   ],
 }
 
+//Gatsby’s manifest plugin configures Gatsby to create a manifest.webmanifest file on every site build.
 //Source plugins bring data into Gatsby’s data system and transformer plugins transform raw content brought by source plugins. This pattern can handle all data sourcing and data transformation you might need when building a Gatsby site.
+// Gatsby’s offline plugin makes a Gatsby site work offline and more resistant to bad network conditions by creating a service worker for your site.
+//Gatsby’s react helmet plugin provides drop-in support for server rendering data added with React Helmet. Using the plugin, attributes you add to React Helmet will be added to the static HTML pages that Gatsby builds.
