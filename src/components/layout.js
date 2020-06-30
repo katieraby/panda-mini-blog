@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         border-left: 10px solid #cfa672;
         border-right: 10px solid #cfa672;
         max-width: 700px;
-        height: 100vh;
+        min-height: 100vh;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
         background-color: #fff;
